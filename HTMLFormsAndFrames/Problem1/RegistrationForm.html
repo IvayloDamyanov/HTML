@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+            width: 40%;
+        }
+        td
+        {
+            border: 2px solid gray;
+            padding: 2px;
+        }
+        td.Col1
+        {
+            width: 30%;
+            text-align: right;
+            font-weight: bold;
+        }
+        td.Col2
+        {
+            width: 50%;
+        }
+        td.Col3
+        {
+            width: 10%;
+            text-align: right;
+        }
+        td.Col4
+        {
+            width: 10%;
+        }
+        td.Reset
+        {
+            background: lightgreen;
+            padding-left: 30%;
+        }
+        input.text
+        {
+            width: 100%;
+            box-sizing: border-box;
+            border: inset;
+        }
+        input.State
+        {
+            width: 25%;
+            box-sizing: border-box;
+            border: inset;
+        }
+        input.Submit
+        {
+            width: 20%;
+            float: left;
+            border: outset;
+        }
+        input.Reset
+        {
+            width: 30%;
+            float: left;
+            border: outset;
+        }
+        input.Short
+        {
+            width: 10%;
+            box-sizing: border-box;
+            border: inset;
+        }
+        input.Med
+        {
+            width: 20%;
+            box-sizing: border-box;
+            border: inset;
+        }
+        input.long
+        {
+            width: 40%;
+            box-sizing: border-box;
+            border: inset;
+        }
+        textarea
+        {
+            resize: none;
+            float: left;
+            border: inset;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        textarea.address
+        {
+            height: 4em;
+        }
+        textarea.comment
+        {
+            height: 6em;
+        }
+        select.dropdown
+        {
+            border: inset;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class = "Col1">Last Name</td>
+                <td colspan="3"><form action="" method="post"><input class = "text" name = "LastName" type="text"></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">First Name</td>
+                <td colspan="3"><form action="" method="post"><input class = "text" name = "FirstName" type="text"></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Address</td>
+                <td colspan="3"><form action="" method="post"><textarea class = "address" name = "Address" type="text"></textarea></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">City</td>
+                <td class = "Col2"><form action="" method="post"><input class = "text" name = "City" type="text"/></form></td>
+                <td class = "Col3">State</td>
+                <td class = "Col4"><form action="" method="post"><input class = "text" name = "State" type="text"/></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Zip/Postal Code</td>
+                <td colspan="3"><form action="" method="post"><input class = "text" name = "Zip" type="text"/></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Country</td>
+                <td colspan="3"><form action="" method="post">
+                    <select class = "dropdown" name = "Country">
+                        <option value = "Bulgaria">Bulgaria</option>
+                    </select></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Phone(country code,<br/>area code, number)</td>
+                <td colspan = "3">
+                    <form action = "" method="post">
+                       (+ <input class = "Med" name = "country code" type = "text"/> ) <input class = "Med" name = "country code" type = "text"/> - <input class = "long" name = "country code" type = "text"/>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class = "Col1">E-mail</td>
+                <td colspan="3"><form action="" method="post"><input class = "text" name = "Email" type="text"></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Birth date</td>
+                <td colspan = "3">
+                    <form action = "" method="post">
+                       Month <input class = "Short" name = "month" type = "text"/> Day <input class = "Short" name = "day" type = "text"/> Year (4 digit) <input class = "Med" name = "country code" type = "text"/>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class = "Col1">Gender</td>
+                <td colspan="3"><form action="" method="post">
+                    <select class = "dropdown" name = "Gender">
+                        <option value = "Male">Male</option>
+                        <option value = "Female">Female</option>
+                        <option value = "Other">Other</option>
+                    </select></form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Starting date</td>
+                <td colspan="3"><form action="" method="post">
+                    <input class = "started" name = "Started" type="radio" value="Spring 2016"><label>Spring 2016</label>
+                    <input class = "started" name = "Started" type="radio" value="Autumn 2016"><label>Autumn 2016</label>
+                </form></td>
+            </tr>
+            <tr>
+                <td class = "Col1">Comments/Questions</td>
+                <td colspan="3"><form action="" method="post"><textarea class = "comment" name = "Comment" type="text"></textarea></form></td>
+            </tr>
+            <tr>
+                <td class = "Reset" colspan = "4">
+                    <form action="" method="post">
+                        <input class = "Reset" type = "reset" name = "ResetBtn" value = "Clear this form"/>
+                        <input class = "Submit" type = "submit" name = "Submit" value = "Submit"/>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Component</title>
+        <style>
+            table
+            {
+                border: 3px solid gray;
+                border-radius: 10px;
+                font-family: Tahoma;
+                border-spacing: 0;
+                width: 80%;
+            }
+            tr
+            {
+                width: 100%;
+            }
+            tr.gray
+            {
+                background: linear-gradient(#e7e9eb, #bbc0c5);
+            }
+            tr.gray td
+            {
+                border: 1px solid #a4abb2;
+            }
+            tr.gray td.pagination
+            {
+                border: 0px solid white;
+                border-top: 1px solid #a4abb2;
+            }
+            td
+            {
+                border: 1px solid #d0d7e5;
+                padding: 8px;
+            }
+            td.ProductID
+            {
+                width: 8%;
+            }
+            td.ProductName
+            {
+                width: 34%;
+            }
+            td.UnitPrice
+            {
+                width: 15%;
+            }
+            td.QuantityPerUnit
+            {
+                width: 15%;
+            }
+            td.UnitsInStock
+            {
+                width: 18%;
+            }
+            td.Discontinued
+            {
+                width: 10%;
+            }
+            td.itemPages
+            {
+                align: right;
+                border: 0px solid white;
+            }
+            input.text
+            {
+                vertical-align: middle;
+                width: 60%;
+                height: 100%;
+            }
+            input.checkbox
+            {
+                vertical-align: middle;                
+                align: left;
+            }
+            button
+            {
+                vertical-align: middle;
+                align: left;
+            }
+            img
+            {
+                vertical-align: middle;
+            }
+            ul.pagination
+            {
+                display: inline;
+                padding: 0;
+                margin: 0;
+            }
+            ul.itemPages
+            {
+                display: inline;
+                padding: 0;
+                margin: 0;
+            }
+            li
+            {
+                display: inline;
+                vertical-align: middle;
+                padding: 2px;
+            }
+            ul.pagination li button
+            {
+                vertical-align: middle;
+            }
+            li.one
+            {
+                border: 1px solid red;
+                border-radius: 2px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr class = "gray">
+                <td colspan = "6">
+                    Drag a column header and drop it here to group by that column
+                </td>
+            </tr>
+            <tr class = "gray">
+                <td class = "ProductID">
+                    ProductID
+                </td>
+                <td class = "ProductName">
+                    Product name
+                </td>
+                <td class = "UnitPrice">
+                    Unit Price
+                </td>
+                <td class = "QuantityPerUnit">
+                    Quantity per unit
+                </td>
+                <td class = "UnitsInStock">
+                    Units in stock
+                </td>
+                <td class = "Discontinued">
+                    Discontinued
+                </td>
+            </tr>
+            <tr class = "gray">
+                <td class = "ProductID">
+                    <input class = "text" type="text"/>
+                </td>
+                <td class = "ProductName">
+                    <input class = "text" type="text"/>
+                </td>
+                <td class = "UnitPrice">
+                    <input class = "text" type="text"/>
+                    <button type = "button"><img src="button.png" alt="button.jpg"></button>
+                </td>
+                <td class = "QuantityPerUnit">
+                    <input class = "text" type="text"/>
+                </td>
+                <td class = "UnitsInStock">
+                    <input class = "text" type="text"/>
+                    <button type = "button"><img src="button.png" alt="button.jpg"></button>
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox">
+                    <button type = "button"><img src="button.png" alt="button.jpg"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    1
+                </td>
+                <td class = "ProductName">
+                    Chai
+                </td>
+                <td class = "UnitPrice">
+                    $18.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    10 boxes x 20 bags
+                </td>
+                <td class = "UnitsInStock">
+                    39
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    2
+                </td>
+                <td class = "ProductName">
+                    Chang
+                </td>
+                <td class = "UnitPrice">
+                    $19.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    24 - 12 oz bottles
+                </td>
+                <td class = "UnitsInStock">
+                    17
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    3
+                </td>
+                <td class = "ProductName">
+                    Aniseed Syrup
+                </td>
+                <td class = "UnitPrice">
+                    $10.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    12 - 550 ml bottles
+                </td>
+                <td class = "UnitsInStock">
+                    53
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    4
+                </td>
+                <td class = "ProductName">
+                    Chef Anton's Cajun Seasoning
+                </td>
+                <td class = "UnitPrice">
+                    $22.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    48 - 6 oz jars
+                </td>
+                <td class = "UnitsInStock">
+                    53
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    5
+                </td>
+                <td class = "ProductName">
+                    Chef Anton's Gumbo mix
+                </td>
+                <td class = "UnitPrice">
+                    $21.35
+                </td>
+                <td class = "QuantityPerUnit">
+                    36 boxes
+                </td>
+                <td class = "UnitsInStock">
+                    0
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    6
+                </td>
+                <td class = "ProductName">
+                    Grandma's Boysenberry Spread
+                </td>
+                <td class = "UnitPrice">
+                    $25.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    12 - 8 oz jars
+                </td>
+                <td class = "UnitsInStock">
+                    120
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    7
+                </td>
+                <td class = "ProductName">
+                    Uncle Bob's Organic Dried Pears
+                </td>
+                <td class = "UnitPrice">
+                    $30.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    12 - 1 lb pkgs.
+                </td>
+                <td class = "UnitsInStock">
+                    15
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    8
+                </td>
+                <td class = "ProductName">
+                    Northwoods Cranberry Sauce
+                </td>
+                <td class = "UnitPrice">
+                    $40.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    12 - 12 oz jars
+                </td>
+                <td class = "UnitsInStock">
+                    6
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    9
+                </td>
+                <td class = "ProductName">
+                    Mishi Kobe Niku
+                </td>
+                <td class = "UnitPrice">
+                    $97.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    18 - 500 g pkgs.
+                </td>
+                <td class = "UnitsInStock">
+                    29
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "ProductID">
+                    10
+                </td>
+                <td class = "ProductName">
+                    Ikura
+                </td>
+                <td class = "UnitPrice">
+                    $31.00
+                </td>
+                <td class = "QuantityPerUnit">
+                    12 - 200 ml jars
+                </td>
+                <td class = "UnitsInStock">
+                    31
+                </td>
+                <td class = "Discontinued">
+                    <input class = "checkbox" type = "checkbox"/>
+                </td>
+            </tr>
+            <tr class = "gray">
+                <td class = "pagination" colspan = "4">
+                    <ul class="pagination" type = "none">
+                        <li><button type = "button"><img src="first.png" alt="first1.png"></button></li>
+                        <li><button type = "button"><img src="previous.png" alt="previous1.png"></button></li>
+                        <li class = "one">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>...</li>
+                        <li><button type = "button"><img src="next.png" alt="next1.png"></button></li>
+                        <li><button type = "button"><img src="last.png" alt="last1.png"></button></li>
+                    </ul>
+                </td>
+                <td class = "pagination" colspan = "2">
+                    <ul>
+                    <li>335104 items in 33511 pages</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
